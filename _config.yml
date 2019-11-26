@@ -2,19 +2,19 @@
 info:
   name: Material X
   docs: https://xaoxuu.com/wiki/material-x/
-  cdn: # 要使用CDN，请在根目录的config文件中写上 use_cdn: true
+  cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.11.26/css/style.css
+      style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.10.22/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.11/js/app.js
-      search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.11/js/search.js
+      app: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/app.js
+      search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/search.js
       volantis: https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0.6/js/volantis.min.js
 
 
 
 ############################### 主题风格 ###############################
-# style: material    # material: 导航栏和标题栏背景是主题色
-style: pure        # pure: 导航栏和标题栏背景是白色
+style: material    # material: 导航栏和标题栏背景是主题色
+# style: pure        # pure: 导航栏和标题栏背景是白色
 
 
 ############################### 服务开关 ###############################
@@ -30,15 +30,15 @@ busuanzi: true
 music:
   enable: true      # 是否启用
   color: '#1BCDFC'  # 主题色
-  mode: circulation # random （随机） single （单曲） circulation （列表循环） order （列表）
+  mode: random # random （随机） single （单曲） circulation （列表循环） order （列表）
   server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
   type: playlist    # song （单曲） album （专辑） playlist （歌单） search （搜索）
-  id: 2615636388    # 歌曲/专辑/歌单 ID
+  id: 463954692    # 歌曲/专辑/歌单 ID
   volume: 0.7       # 音量, 0~1
   autoplay: false   # 自动播放
 
 # 友链页头像占位图
-avatar_placeholder: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
+avatar_placeholder: https://cdn.luogu.com.cn/upload/image_hosting/wkslcscq.png
 
 # 日期格式 http://momentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
@@ -50,7 +50,7 @@ backstretch:
   duration: 6000 # 持续时间（毫秒）
   fade: 2500     # 渐变（毫秒）
   images:
-    - https://img.vim-cn.com/29/91197b04c13f512f734a76d4ac422d89dbe229.jpg
+    - https://cdn.luogu.com.cn/upload/image_hosting/k91vggvt.png
 
 
 
@@ -59,22 +59,21 @@ backstretch:
 cover:
   scheme: search    # 后期将会提供多种封面方案
   height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
-  title: Demo
+  title: Hello, I'm infiWang. 
   # logo: assets/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
   # search_placeholder: '搜索'
-  # 主页封面菜单
   features:
     - name: 博文
       icon: fas fa-rss
       url: /
-    - name: 项目
-      icon: fas fa-code-branch
-      url: projects/
+    # - name: 项目
+    #   icon: fas fa-code-branch
+    #   url: projects/
     - name: 友链
       icon: fas fa-link
       url: friends/
       rel: nofollow
-    - name: 关于
+    - name: 关于我
       icon: fas fa-info-circle
       url: about/
       rel: nofollow
@@ -82,20 +81,20 @@ cover:
 
 # 桌面端导航栏菜单
 menu_desktop:
-  - name: 示例
-    icon: fas fa-grin
+  - name: 主页
+    icon: fas fa-rss
     url: /
   - name: 分类
     icon: fas fa-folder-open
-    url: blog/categories/
+    url: categories/
     rel: nofollow
   - name: 标签
     icon: fas fa-hashtag
-    url: blog/tags/
+    url: tags/
     rel: nofollow
   - name: 归档
     icon: fas fa-archive
-    url: blog/archives/
+    url: archives/
     rel: nofollow
 
 # 手机端导航菜单（从右上角的按钮点击展开）
@@ -107,18 +106,14 @@ menu_mobile:
     icon: fas fa-archive
     url: blog/archives/
     rel: nofollow
-  - name: 开源项目
-    icon: fas fa-code-branch
-    url: projects/
-  - name: 我的友链
+  # - name: 开源项目
+  #   icon: fas fa-code-branch
+  #   url: projects/
+  - name: 友链
     icon: fas fa-link
     url: friends/
     rel: nofollow
-  - name: 主题文档
-    icon: fas fa-book
-    url: https://xaoxuu.com/wiki/material-x/
-    rel: nofollow
-  - name: 关于小站
+  - name: 关于我
     icon: fas fa-info-circle
     url: about/
     rel: nofollow
@@ -129,7 +124,7 @@ layout:
     # 列表中每一篇文章的meta信息
     meta: [title, author, date, categories, top]
     # 列表类页面的侧边栏
-    sidebar: [author, plain, list, grid, category, tagcloud]
+    sidebar: [author, music, list, grid, category, tagcloud]
   # 文章页面布局
   article:
     # 文章页面主体元素，你也可以在页面的Front-matter中设置
@@ -140,24 +135,19 @@ layout:
     header: [title, author, date, categories, counter, top]
     footer: [updated, tags, share]
     # 文章页面的侧边栏
-    sidebar: [author, plain, toc, grid, category, tagcloud, list, related_posts]
+    sidebar: [author, toc, grid, category, tagcloud, list, related_posts]
   # 其他的页面布局暂时等于文章列表
 
 
 # 侧边栏小部件配置
 sidebar:
   - widget: author
-    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
-    jinrishici: true
+    avatar: https://cdn.luogu.com.cn/upload/image_hosting/gq2fyrra.png
     social: true
-  - widget: plain
-    icon: fas fa-file
-    title: 文本部件
-    body: '这是一段支持markdown的文本<br>![](https://img.vim-cn.com/4e/3c87a2fd28fd0b9c2f27ce3f83f1e9275d0488.png)'
   - widget: toc
   - widget: grid
     icon: fas fa-map-signs
-    title: 站内导航
+    title: 导航
     rows:
       - name: 近期文章
         icon: fas fa-clock
@@ -166,18 +156,14 @@ sidebar:
         icon: fas fa-archive
         url: blog/archives/
         rel: nofollow
-      - name: 开源项目
-        icon: fas fa-code-branch
-        url: projects/
-      - name: 我的友链
+      # - name: 开源项目
+      #   icon: fas fa-code-branch
+      #   url: projects/
+      - name: 友链
         icon: fas fa-link
         url: friends/
         rel: nofollow
-      - name: 主题文档
-        icon: fas fa-book
-        url: https://xaoxuu.com/wiki/material-x/
-        rel: nofollow
-      - name: 关于小站
+      - name: 关于我
         icon: fas fa-info-circle
         url: about/
         rel: nofollow
@@ -192,45 +178,42 @@ sidebar:
       icon: fas fa-expand-arrows-alt
       url: blog/tags/
       rel: nofollow
-  # - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
+  - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
   - widget: music
     icon: fas fa-compact-disc
-    title: "最近在听"
+    title: "喜欢的歌"
     more:
       icon: far fa-heart
-      url: https://music.163.com/#/user/home?id=63035382
+      url: https://music.163.com/#/user/home?id=118720654
       rel: external nofollow noopener noreferrer
       target: _blank
     server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
     type: playlist    # song （单曲） album （专辑） playlist （歌单） search （搜索）
-    id: 2615636388     # 歌曲/专辑/歌单 ID
-  - widget: list
-    icon: fas fa-thumbs-up
-    title: 强烈推荐
-    rows:
-      - name: Hexo脚本（Mac）
-        url: https://xaoxuu.com/wiki/hexo.sh/
-      - name: 图床脚本（Mac）
-        url: https://xaoxuu.com/wiki/vim-cn.sh/
-      - name: 图片在线压缩
-        url: https://yasuotu.com
-      - name: 生成Favicon
-        url: https://realfavicongenerator.net
-      - name: 简历主题
-        url: https://mxclub.github.io/resume/
-
+    id: 463954692     # 歌曲/专辑/歌单 ID
 
 
 # 社交信息
 social:
   - icon: fas fa-rss
     url: atom.xml
-  - icon: fas fa-envelope
-    url: mailto:me@xaoxuu.com
-  - icon: fab fa-github
-    url: https://github.com/xaoxuu
+  - icon: fab fa-telegram-plane
+    url: https://t.me/infiWang
+  - icon: fab fa-twitter
+    url: https://twitter.com/infiWang
+  - icon: fab fa-weibo
+    url: https://weibo.com/u/6120588871
+  - icon: fab fa-zhihu
+    url: https://www.zhihu.com/people/infiW4ng
+  - icon: fab fa-discord
+    url: https://discord.gg/3FEmDyR
   - icon: fas fa-headphones-alt
-    url: https://music.163.com/#/user/home?id=63035382
+    url: https://music.163.com/#/user/home?id=118720654
+  - icon: fab fa-steam-symbol
+    url: https://steamcommunity.com/id/infiWang/
+  - icon: fas fa-envelope
+    url: mailto:root@infi.wang
+  - icon: fab fa-github
+    url: https://github.com/infiWang
 
 
 # 分享按钮
@@ -253,8 +236,8 @@ share:
   #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
 
 
-footer_post: '<center>这是文章页脚，可以设置打赏图片：<br><fancybox>![](https://img.vim-cn.com/4a/5f8244a7c6e1e069a781b84ed11008e7955e16.png)</fancybox></center>'
-# footer: '网页页脚文字，支持[markdown](/)'
+
+# footer: '页脚文字，支持[markdown](/)'
 
 
 ############################### 评论系统 ###############################
@@ -274,7 +257,7 @@ footer_post: '<center>这是文章页脚，可以设置打赏图片：<br><fancy
 ############################### 杂项，请勿删除 ###############################
 #valine配置
 valine:
-  enable: true # 如果你想用Valine评论系统，请设置enable为true
+  enable: false # 如果你想用Valine评论系统，请设置enable为true
   volantis: true # 是否启用volantis版本（禁止匿名，增加若干贴吧、QQ表情）
   # 还需要在根目录配置文件中添加下面这三行内容
   # leancloud:
