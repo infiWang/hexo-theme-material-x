@@ -38,7 +38,7 @@ music:
   autoplay: false   # 自动播放
 
 # 友链页头像占位图
-avatar_placeholder: https://cdn.luogu.com.cn/upload/image_hosting/wkslcscq.png
+avatar_placeholder: https://infi.wang/ContentStorage/pic/Avatar/avatarPlaceholder.png
 
 # 日期格式 http://momentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
@@ -50,7 +50,7 @@ backstretch:
   duration: 6000 # 持续时间（毫秒）
   fade: 2500     # 渐变（毫秒）
   images:
-    - https://cdn.luogu.com.cn/upload/image_hosting/k91vggvt.png
+    - https://infi.wang/ContentStorage/pic/Blog/blogBanner.png
 
 
 
@@ -99,10 +99,10 @@ menu_desktop:
 
 # 手机端导航菜单（从右上角的按钮点击展开）
 menu_mobile:
-  - name: 近期文章
+  - name: 文章
     icon: fas fa-clock
     url: /
-  - name: 文章归档
+  - name: 归档
     icon: fas fa-archive
     url: blog/archives/
     rel: nofollow
@@ -142,19 +142,19 @@ layout:
 # 侧边栏小部件配置
 sidebar:
   - widget: author
-    avatar: https://cdn.luogu.com.cn/upload/image_hosting/gq2fyrra.png
+    avatar: https://infi.wang/ContentStorage/pic/Avatar/infiLogo.jpg
     social: true
   - widget: toc
   - widget: grid
     icon: fas fa-map-signs
     title: 导航
     rows:
-      - name: 近期文章
+      - name: 文章
         icon: fas fa-clock
         url: /
-      - name: 文章归档
+      - name: 归档
         icon: fas fa-archive
-        url: blog/archives/
+        url: archives/
         rel: nofollow
       # - name: 开源项目
       #   icon: fas fa-code-branch
@@ -219,18 +219,18 @@ social:
 # 分享按钮
 # 当id为qrcode时需要安装插件  npm i -S hexo-helper-qrcode
 share:
-  - id: qq
-    name: QQ好友
-    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png
-  - id: qzone
-    name: QQ空间
-    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png
+  # - id: qq
+  #   name: QQ好友
+  #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png
+  # - id: qzone
+  #   name: QQ空间
+  #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png
   # - id: qrcode
   #   name: 微信
   #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
-  - id: weibo
-    name: 微博
-    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png
+  # - id: weibo
+  #   name: 微博
+  #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png
   # - id: qrcode
   #   name: QRcode
   #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
