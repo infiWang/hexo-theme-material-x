@@ -50,7 +50,7 @@ backstretch:
   duration: 6000 # 持续时间（毫秒）
   fade: 2500     # 渐变（毫秒）
   images:
-    - https://infi.wang/ContentStorage/pic/Blog/blogBanner.png
+    - https://cdn.infi.wang/pic/blog/blogBanner.png
 
 
 
@@ -142,7 +142,7 @@ layout:
 # 侧边栏小部件配置
 sidebar:
   - widget: author
-    avatar: https://infi.wang/ContentStorage/pic/Avatar/infiLogo.jpg
+    avatar: https://cdn.infi.wang/pic/avatar/infiLogo.jpg
     social: true
   - widget: toc
   - widget: grid
