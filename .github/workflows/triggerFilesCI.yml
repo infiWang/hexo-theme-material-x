@@ -1,4 +1,4 @@
-name: HexoBlogFiles CI Trigger
+name: HexoFiles CI Trigger
 
 on: 
   push:
